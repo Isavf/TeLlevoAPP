@@ -27,4 +27,7 @@ export class HomePage {
     this.router.navigate(['/estudiante'])
   }
 
+  GoCapacidad(){
+    this.router.navigate(['/capacidad-transporte'])
+  }
 }

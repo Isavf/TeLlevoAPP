@@ -32,8 +32,8 @@ const routes: Routes = [
     loadChildren: () => import('./page/estudiante/estudiante.module').then( m => m.EstudiantePageModule)
   },
   {
-    path: 'estudiante',
-    loadChildren: () => import('./page/estudiante/estudiante.module').then( m => m.EstudiantePageModule)
+    path: 'capacidad-transporte',
+    loadChildren: () => import('./page/chofer/capacidad-transporte/capacidad-transporte.module').then( m => m.CapacidadTransportePageModule)
   },
 ];
 

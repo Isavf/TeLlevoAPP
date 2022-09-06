@@ -14,6 +14,14 @@ export class EstudiantePage implements OnInit {
     this.router.navigate(['/home'])
   }
 
+  GoCapacidad(){
+    this.router.navigate(['/capacidad-transporte'])
+  }
+
+  GoIndex_Chofer(){
+    this.router.navigate(['/index-chofer'])
+  }
+
   ngOnInit() {
   }
 

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>disponibles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides >
+
+    <ion-slide>
+      <div>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle style="font-size: 11px;">Origen: DuocUC Sede Puente Alto</ion-card-subtitle>
+            <ion-card-title style="font-size: 15px;">Destino: Las Vegas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="font-size: 12px;">
+            Conductor: Pancho <br> Telefono: +56984295712 <br> Carrera: Tec. Construccion <br>
+            Hora Salida: 23:56 <br> Lugar Encuentro: Puerta Principal <br>
+            Capacidad personas: 1/4
+          </ion-card-content>
+        </ion-card>
+        <ion-button >Solicitar transporte</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle style="font-size: 11px;">Origen: DuocUC Sede Puente Alto</ion-card-subtitle>
+            <ion-card-title style="font-size: 15px;">Destino: Viña del mar</ion-card-title>
+          </ion-card-header>
+          <ion-card-content style="font-size: 12px;">
+            Conductor: Francisco <br> Telefono: +56984295712 <br> Carrera: Tec. Informatica <br>
+            Hora Salida: 14:00 <br> Lugar Encuentro: Puerta Principal <br>
+            Capacidad personas: 3/4
+          </ion-card-content>
+        </ion-card>
+        <ion-button >Solicitar transporte</ion-button>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="speakers" (click)="GoHome()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+          <ion-label>Salir</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
