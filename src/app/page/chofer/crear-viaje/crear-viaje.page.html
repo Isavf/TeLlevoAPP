@@ -1,0 +1,66 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="primary">
+    <ion-title>Generar Viaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="x">
+
+  <form style="margin-right: 5%; margin-left: 5%; margin-top: 10%;">
+    <ion-item>
+      <ion-label style="color: black;" position="floating">Origen</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: black;" position="floating">Destino</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: black;" position="floating">Precio de viaje</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: black;" position="floating">Encuentro</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label style="color: black;" position="floating">Hora de salida</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <br>
+    <div>
+      <ion-button expand="block">Crear viaje</ion-button>
+    </div>
+  </form>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="speakers" (click)="GoHome()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+          <ion-label>Salir</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="schedule" (click)="GoViaje()">
+          <ion-icon name="add" (click)="GoViaje()"></ion-icon>
+          <ion-label>Crear Viaje</ion-label>
+
+        </ion-tab-button>
+
+        <ion-tab-button tab="speakers" (click)="GoPerfil()">
+          <ion-icon name="person-circle" (click)="GoPerfil()"></ion-icon>
+          <ion-label>Perfil</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="speakers" (click)="GoHistorial()">
+          <ion-icon name="list" (click)="GoHistorial()"></ion-icon>
+          <ion-label>Historial</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+
+  </ion-toolbar>
+</ion-footer>

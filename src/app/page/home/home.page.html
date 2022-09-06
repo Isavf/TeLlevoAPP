@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true" class="x">
+
+  <div id="container" class="y">
+    <form action="" style="Background-color: transparent;">
+      <ion-item class="login">
+        <ion-label style="color: black;" position="floating">Usuario</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item class="login">
+        <ion-label style="color: black;" position="floating">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </form>
+    <div>
+      <ion-buttons slot="end" style="margin-top: 5%;">
+        <ion-button (click)="ingresar()" style="color: black;">Ingresar</ion-button>
+        <ion-button (click)="GoRegistro()" style="color: black; margin-left: auto;">Registrarse</ion-button>
+      </ion-buttons>
+    </div>
+    <ion-button (click)="GoIndex_Chofer()">Index Conductor</ion-button>
+    <ion-button (click)="GoEstudiante()">Index Estudiante</ion-button>
+  </div>
+</ion-content>
+

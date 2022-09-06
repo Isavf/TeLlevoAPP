@@ -4,7 +4,9 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%;
+  top: 35%;
+  margin-left: 5%;
+  margin-right: 5%;
   transform: translateY(-50%);
 }
 
@@ -25,3 +27,12 @@
 #container a {
   text-decoration: none;
 }
+
+.login {
+  opacity: 30%;
+}
+
+ion-content.x{
+  --background: url(../../../assets/imagenes_A/fondo.jpg) 0 0/100% 100% no-repeat;
+}
+

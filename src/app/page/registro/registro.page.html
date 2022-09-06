@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center;">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="x">
+
+  <div id="container">
+    <form style="font-size: 70%;">
+      <ion-item>
+        <ion-select placeholder="Seleccionar">
+          <ion-select-option value="1">Chofer</ion-select-option>
+          <ion-select-option value="2">Estudiante</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Nombre completo</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Sede - Duoc Uc</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Carrera</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Telefono</ion-label>
+        <ion-input type="number" min="0" size="4" maxlength="4"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Correo</ion-label>
+        <ion-input type="email" placeholder="example@example.com"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label style="color: black;" position="floating">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <div style="flex: auto">
+          <ion-button expand="block">Registro</ion-button>
+        </div>
+      </ion-item>
+    </form>
+  </div>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="speakers" (click)="GoHome()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+          <ion-label>Salir</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>
