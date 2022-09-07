@@ -1,6 +1,6 @@
-<ion-header style="text-align: center;">
-  <ion-toolbar color="primary">
-    <ion-title>Generar Viaje</ion-title>
+<ion-header>
+  <ion-toolbar style="--ion-background-color: rgb(26, 26, 26, 1);">
+    <ion-title style="text-align: center; color: rgb(255, 255, 255, 1);">Generar Viaje</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,8 +24,13 @@
       <ion-input type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label style="color: black;" position="floating">Hora de salida</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+        </ng-template>
+      </ion-modal>
     </ion-item>
     <ion-item>
       <ion-label style="color: black;" position="floating">Capacidad de personas</ion-label>
@@ -40,7 +45,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
+  <ion-toolbar style="--ion-background-color: rgb(26, 26, 26, 1);">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
         <ion-tab-button tab="speakers" (click)="GoHome()">
