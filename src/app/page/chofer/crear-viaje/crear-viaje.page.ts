@@ -37,7 +37,7 @@ export class CrearViajePage implements OnInit {
 
   ngOnInit() {
   }
-
+  /*
   async CreacionViaje() {
 
     var r = this.FormularioViaje.value;
@@ -62,7 +62,7 @@ export class CrearViajePage implements OnInit {
 
     localStorage.setItem('registroViaje',JSON.stringify(crear));
 
-  }
+  } */
 
   Cerrar() {
     localStorage.removeItem('ingresado')
