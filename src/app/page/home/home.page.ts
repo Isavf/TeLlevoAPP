@@ -38,7 +38,17 @@ export class HomePage implements OnInit {
     var usuario = JSON.parse(localStorage.getItem('usuario'));
 
     if(usuario.usuario == f.correo && usuario.contrasena == f.password){
+
       console.log('Ingresado');
+      localStorage.setItem('ingresado','true');
+
+      if(usuario.categoriaUsuario === "1"){
+        this.navCtrl.navigateRoot('perfil-chofer')
+      }
+      if(usuario.categoriaUsuario === "2"){
+        this.navCtrl.navigateRoot('estudiante')
+      }
+
     }else{
       const alert = await this.alertController.create({
         header: 'Datos incorrectos',

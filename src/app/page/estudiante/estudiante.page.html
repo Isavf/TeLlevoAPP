@@ -6,8 +6,8 @@
 
 <ion-content style="--ion-background-color:#FFB800;">
   <div class="y">
-    <h5 style="text-align: center;">Bienvenido <br> 
-      Alexander Busto</h5>
+    <h5 style="text-align: center;">Bienvenido <br>  <br>
+      {{datos.nombre}}</h5>
     <img src="../../../assets/imagenes_A/kil.png" alt="" width="" height="250px">
   </div>
   <br>
@@ -21,8 +21,8 @@
   <ion-toolbar style="--ion-background-color: rgb(26, 26, 26, 1);">
     <ion-tabs >
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="speakers" (click)="GoHome()">
-          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+        <ion-tab-button tab="speakers" (click)="Cerrar()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="Cerrar()"></ion-icon>
           <ion-label>Salir</ion-label>
         </ion-tab-button>
       </ion-tab-bar>

@@ -13,6 +13,11 @@ export class IndexChoferPage implements OnInit {
   ngOnInit() {
   }
 
+  Cerrar(){
+    localStorage.removeItem('ingresado')
+    this.router.navigate(['/home'])
+  }
+
   GoHome(){
     this.router.navigate(['/home'])
   }

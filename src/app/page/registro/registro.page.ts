@@ -33,7 +33,7 @@ export class RegistroPage implements OnInit {
       'contrasena': new FormControl("", Validators.required),
 
     });
-    
+
   }
 
   async guardar(){
@@ -60,9 +60,16 @@ export class RegistroPage implements OnInit {
       correo: f.correo,
       contrasena: f.contrasena,
     }
+    
     localStorage.setItem('usuario',JSON.stringify(usuario));
-    localStorage.setItem('registrado','true');
-    this.navCtrl.navigateRoot('home')
+    localStorage.setItem('ingresado','true');
+
+    if(usuario.categoriaUsuario === "1"){
+      this.navCtrl.navigateRoot('perfil-chofer')
+    }
+    if(usuario.categoriaUsuario === "2"){
+      this.navCtrl.navigateRoot('estudiante')
+    }
   }
 
   GoHome() {

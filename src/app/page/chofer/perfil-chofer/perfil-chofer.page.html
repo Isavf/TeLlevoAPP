@@ -7,16 +7,16 @@
 <ion-content style="--ion-background-color:#FFB800;">
   <ion-card style="margin-top: 20%; --ion-background-color:rgba(238, 238, 238, 1);">
     <ion-card-header>
-      <ion-card-title>Juan Perez</ion-card-title>
-      <ion-card-subtitle>Ingenieria Informatica</ion-card-subtitle>
+      <ion-card-title>{{datos.nombre}}</ion-card-title>
+      <ion-card-subtitle>{{datos.carrera}}</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      Nombre: Juan Martin <br> 
+      Nombre:  {{datos.nombre}}<br> 
       Tipo: Chofer <br>
-      Telefono: 981523514 <br> 
-      Sede: Puente Alto <br>
-      correo: ejemplo@duocuc.cl
+      Telefono: {{datos.telefono}} <br> 
+      Sede: {{datos.Sede}} <br>
+      correo: {{datos.correo}}
     </ion-card-content>
     
   </ion-card>
@@ -28,8 +28,8 @@
   <ion-toolbar style="--ion-background-color: rgb(26, 26, 26, 1);">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="speakers" (click)="GoHome()">
-          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+        <ion-tab-button tab="speakers" (click)="Cerrar()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="Cerrar()"></ion-icon>
           <ion-label>Salir</ion-label>
         </ion-tab-button>
   

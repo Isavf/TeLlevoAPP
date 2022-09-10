@@ -24,13 +24,8 @@
       <ion-input type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-      <ion-modal [keepContentsMounted]="true">
-        <ng-template>
-          <ion-datetime id="datetime"></ion-datetime>
-        </ng-template>
-      </ion-modal>
+      <ion-label style="color: black;" position="floating">Hora</ion-label>
+      <ion-input type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label style="color: black;" position="floating">Capacidad de personas</ion-label>
@@ -38,7 +33,7 @@
     </ion-item>
     <br>
     <div>
-      <ion-button expand="block">Crear viaje</ion-button>
+      <ion-button (click)="guardar()" expand="block">Crear viaje</ion-button>
     </div>
   </form>
 
@@ -48,8 +43,8 @@
   <ion-toolbar style="--ion-background-color: rgb(26, 26, 26, 1);">
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="speakers" (click)="GoHome()">
-          <ion-icon name="arrow-undo-circle-outline" (click)="GoHome()"></ion-icon>
+        <ion-tab-button tab="speakers" (click)="Cerrar()">
+          <ion-icon name="arrow-undo-circle-outline" (click)="Cerrar()"></ion-icon>
           <ion-label>Salir</ion-label>
         </ion-tab-button>
 
