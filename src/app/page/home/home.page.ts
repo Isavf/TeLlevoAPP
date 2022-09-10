@@ -1,5 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController, NavController } from '@ionic/angular'; 
+
+import {
+  FormGroup,
+  FormControl,
+  Validators,
+  FormBuilder
+} from "@angular/forms"; 
 
 @Component({
   selector: 'app-home',
@@ -7,27 +15,59 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
 
-  constructor(private router: Router) {}
+  formularioL: FormGroup;
 
-  GoHome(){
+  constructor(private router: Router,
+    public fb: FormBuilder,
+    public alertController: AlertController,
+    public navCtrl: NavController) {
+    
+    this.formularioL = this.fb.group({
+      'usuario': new FormControl("", Validators.required),
+      'password': new FormControl("", Validators.required)
+    });
+  }
+  ngOnInit() {
+  }
+
+  async validarIngreso() {
+
+    var f = this.formularioL.value;
+    var usuario = JSON.parse(localStorage.getItem('usuario'));
+
+    if(usuario.usuario == f.correo && usuario.contrasena == f.password){
+      console.log('Ingresado');
+    }else{
+      const alert = await this.alertController.create({
+        header: 'Datos incorrectos',
+        message: 'Los datos que ingresaste son incorrectos.',
+        buttons: ['Aceptar']
+      });
+  
+      await alert.present();
+    }
+  }
+
+
+  GoHome() {
     this.router.navigate(['/home'])
   }
 
-  GoIndex_Chofer(){
+  GoIndex_Chofer() {
     this.router.navigate(['/index-chofer'])
   }
 
-  GoRegistro(){
+  GoRegistro() {
     this.router.navigate(['/registro'])
   }
 
-  GoEstudiante(){
+  GoEstudiante() {
     this.router.navigate(['/estudiante'])
   }
 
-  GoCapacidad(){
+  GoCapacidad() {
     this.router.navigate(['/capacidad-transporte'])
   }
 }

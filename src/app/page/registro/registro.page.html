@@ -7,9 +7,10 @@
 <ion-content [fullscreen]="true" class="x">
 
   <div id="container">
-    <form style="font-size: 70%;">
+    <form style="font-size: 70%;" [formGroup]="FormularioRegistro" (keyup.enter)="guardar()">
+
       <ion-item>
-        <ion-select placeholder="Seleccionar">
+        <ion-select formControlName="categoriaUsuario" placeholder="Seleccionar">
           <ion-select-option value="1">Chofer</ion-select-option>
           <ion-select-option value="2">Estudiante</ion-select-option>
         </ion-select>
@@ -17,37 +18,37 @@
   
       <ion-item>
         <ion-label style="color: black;" position="floating">Nombre completo</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="nombre" type="text"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label style="color: black;" position="floating">Sede - Duoc Uc</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="Sede" type="text"></ion-input>
       </ion-item>
   
-      <ion-item>
+      <ion-item>   
         <ion-label style="color: black;" position="floating">Carrera</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input formControlName="carrera" type="text"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label style="color: black;" position="floating">Telefono</ion-label>
-        <ion-input type="number" min="0" size="4" maxlength="4"></ion-input>
+        <ion-input formControlName="telefono" type="number" min="0" size="4" maxlength="4"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label style="color: black;" position="floating">Correo</ion-label>
-        <ion-input type="email" placeholder="example@example.com"></ion-input>
+        <ion-input formControlName="correo" type="email" placeholder="example@example.com"></ion-input>
       </ion-item>
   
       <ion-item>
         <ion-label style="color: black;" position="floating">Contraseña</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input formControlName="contrasena" type="password"></ion-input>
       </ion-item>
   
       <ion-item>
         <div style="flex: auto">
-          <ion-button expand="block">Registro</ion-button>
+          <ion-button (click)="guardar()" expand="block">Registro</ion-button>
         </div>
       </ion-item>
     </form>
