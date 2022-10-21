@@ -1,0 +1,37 @@
+
+
+.fondo{
+    --ion-background-color: linear-gradient(200deg, rgba(102, 102, 102, 1) 10%, rgb(238, 238, 238, 1) 80%);
+}
+
+ion-card-subtitle {
+    color: rgb(26, 26, 26, 1);
+    font-size: 11px;
+}
+
+ion-card-title{
+    color: rgb(26, 26, 26, 1);
+    font-size: 15px;
+}
+
+ion-card-content {
+    color: rgb(26, 26, 26, 1);
+    font-size: 12px;
+}
+
+ion-button {
+    --background: #000000;
+    --color: rgb(238, 238, 238, 1);
+  
+    --border-radius: 0;
+    --border-color: #000;
+    --border-style: solid;
+    --border-width: 1px;
+  
+    --box-shadow: 0 10px 9px 0 rgb(26, 26, 26, 1);
+  
+    --ripple-color: rgb(255, 255, 255);
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+}

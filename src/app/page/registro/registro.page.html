@@ -6,8 +6,8 @@
 
 <ion-content [fullscreen]="true" class="x">
 
-  <div id="container">
-    <form style="font-size: 70%;" [formGroup]="FormularioRegistro" (keyup.enter)="guardar()">
+  <div id="contaniner">
+    <form class="formulario" style="font-size: 70%;" [formGroup]="FormularioRegistro" (keyup.enter)="guardar()">
 
       <ion-item>
         <ion-select formControlName="categoriaUsuario" placeholder="Seleccionar">
@@ -52,8 +52,8 @@
         </div>
       </ion-item>
     </form>
-  </div>
 
+  </div>
 
 </ion-content>
 

@@ -73,6 +73,7 @@ export class RegistroPage implements OnInit {
   }
 
   GoHome() {
+    localStorage.removeItem('ingresado')
     this.router.navigate(['/home'])
   }
 

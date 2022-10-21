@@ -11,6 +11,7 @@ export class CapacidadTransportePage implements OnInit {
   constructor(private router: Router) { }
   
   GoHome(){
+    localStorage.removeItem('ingresado')
     this.router.navigate(['/home'])
   }
 

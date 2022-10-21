@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./page/home/home.module').then( m => m.HomePageModule),
-    canActivate: [NoIngresadoGuard]
+    /*canActivate: [NoIngresadoGuard]*/
   },
   {
     path: '',
@@ -17,32 +17,32 @@ const routes: Routes = [
   {
     path: 'index-chofer',
     loadChildren: () => import('./page/chofer/index-chofer/index-chofer.module').then( m => m.IndexChoferPageModule),
-    canActivate: [IngresadoGuard]
+    /*canActivate: [IngresadoGuard]*/
   },
   {
     path: 'perfil-chofer',
     loadChildren: () => import('./page/chofer/perfil-chofer/perfil-chofer.module').then( m => m.PerfilChoferPageModule),
-    canActivate: [IngresadoGuard]
+    /*canActivate: [IngresadoGuard]*/
   },
   {
     path: 'crear-viaje',
     loadChildren: () => import('./page/chofer/crear-viaje/crear-viaje.module').then( m => m.CrearViajePageModule),
-    canActivate: [IngresadoGuard]
+    /*canActivate: [IngresadoGuard]*/
   },
   {
     path: 'registro',
     loadChildren: () => import('./page/registro/registro.module').then( m => m.RegistroPageModule),
-    canActivate: [NoIngresadoGuard]
+    /*canActivate: [NoIngresadoGuard]*/
   },
   {
     path: 'estudiante',
     loadChildren: () => import('./page/estudiante/estudiante.module').then( m => m.EstudiantePageModule),
-    canActivate: [IngresadoGuard]
+    /*canActivate: [IngresadoGuard]*/
   },
   {
     path: 'capacidad-transporte',
     loadChildren: () => import('./page/chofer/capacidad-transporte/capacidad-transporte.module').then( m => m.CapacidadTransportePageModule),
-    canActivate: [IngresadoGuard]
+    /*canActivate: [IngresadoGuard]*/
   },
 ];
 

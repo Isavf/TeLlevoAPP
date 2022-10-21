@@ -8,6 +8,7 @@ import {
   Validators,
   FormBuilder
 } from "@angular/forms"; 
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ export class HomePage implements OnInit {
   constructor(private router: Router,
     public fb: FormBuilder,
     public alertController: AlertController,
-    public navCtrl: NavController) {
+    public navCtrl: NavController,
+    private Firestore: FirestoreService) {
     
     this.formularioL = this.fb.group({
       'usuario': new FormControl("", Validators.required),
@@ -58,6 +60,10 @@ export class HomePage implements OnInit {
   
       await alert.present();
     }
+  }
+
+  GetEstudiantes(){
+     this.Firestore.getCollection();
   }
 
 

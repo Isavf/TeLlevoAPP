@@ -5,8 +5,9 @@
 </ion-header>
 
 <ion-content class="x">
+  
 
-  <form style="margin-right: 5%; margin-left: 5%;">
+  <form class="formulario">
     <ion-item>
       <ion-label style="color: black;" position="floating">Origen</ion-label>
       <ion-input type="text"></ion-input>
@@ -31,10 +32,11 @@
       <ion-label style="color: black;" position="floating">Capacidad de personas</ion-label>
       <ion-input type="number"></ion-input>
     </ion-item>
-    <br>
-    <div>
-      <ion-button (click)="guardar()" expand="block">Crear viaje</ion-button>
-    </div>
+    <ion-item>
+      <div style="flex: auto">
+        <ion-button (click)="guardar()" expand="block">Crear viaje</ion-button>
+      </div>
+    </ion-item>
   </form>
 
 </ion-content>
